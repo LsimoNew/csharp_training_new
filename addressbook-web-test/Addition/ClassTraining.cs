@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace addressbook_web_test
+namespace addition
 {
     [TestFixture]
     public class ClassTraining

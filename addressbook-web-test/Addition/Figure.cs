@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace addressbook_web_test
+namespace addition
 {
     class Figure
     {
