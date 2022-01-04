@@ -16,7 +16,7 @@ namespace addition
         public int Size
         {
             get { return size; }
-            set { this.size = value; }
+            set { size = value; }
         }
     }
 
