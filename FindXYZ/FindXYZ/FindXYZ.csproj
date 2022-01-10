@@ -44,8 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Point.cs" />
-    <Compile Include="Main.cs" />
+    <Compile Include="Figure\Circle.cs" />
+    <Compile Include="Figure\ClassTraining.cs" />
+    <Compile Include="Figure\Figure.cs" />
+    <Compile Include="Figure\Square.cs" />
+    <Compile Include="Points\Point.cs" />
+    <Compile Include="Points\Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
