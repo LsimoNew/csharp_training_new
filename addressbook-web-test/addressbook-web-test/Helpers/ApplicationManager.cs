@@ -21,9 +21,7 @@ namespace WebAddressbookTests
         protected ContactHelper contactHelper;
 
         public ApplicationManager()
-
         {
-
             driver = new ChromeDriver();
             baseURL = "http://localhost/addressbook";
 
@@ -33,8 +31,9 @@ namespace WebAddressbookTests
 
             contactHelper = new ContactHelper(this);
         }
-        
-        public IWebDriver Driver {
+
+        public IWebDriver Driver
+        {
             get
             {
                 return driver;
@@ -51,7 +50,7 @@ namespace WebAddressbookTests
         }
         public NavigationHelper Navigator
         {
-            get 
+            get
             {
                 return navigationHelper;
             }

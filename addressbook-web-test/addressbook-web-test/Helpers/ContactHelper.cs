@@ -17,7 +17,7 @@ namespace WebAddressbookTests
             InitNewContact();
             FillTheFields(contact);
             SaveNewContact();
-            manager.Navigator.ReturnToHomePage();
+            ReturnToContactsPage();
             return this;
         }
 
@@ -43,6 +43,11 @@ namespace WebAddressbookTests
         {
             driver.FindElement(By.LinkText("add new")).Click();
             return this;
+        }
+
+        public void ReturnToContactsPage()
+        {
+            driver.FindElement(By.LinkText("home page")).Click();
         }
 
         public ContactHelper SaveNewContact()
