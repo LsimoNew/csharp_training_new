@@ -25,5 +25,9 @@ namespace WebAddressbookTests
         {
             driver.FindElement(By.LinkText("groups")).Click();
         }
+        public void GoToContactsPage()
+        {
+            driver.FindElement(By.LinkText("home")).Click();
+        }
     }
 }
