@@ -14,7 +14,7 @@ namespace WebAddressbookTests
         public ContactHelper Create(ContactData contact)
         {
             InitNewContact();
-            FillTheFields(contact);
+            FillContactForm(contact);
             SaveNewContact();
             ReturnToContactsPage();
             return this;
@@ -24,7 +24,7 @@ namespace WebAddressbookTests
         {
             manager.Navigator.GoToContactsPage();
             EditContact(x);
-            FillTheFields(newData);
+            FillContactForm(newData);
             SubmitContactModification();
             ReturnToContactsPage();
             return this;
@@ -36,28 +36,21 @@ namespace WebAddressbookTests
             SelectContact(x);
             RemoveContact();
             AcceptAlert();
-            ReturnToContactsPage();
             return this;
         }
 
-        public ContactHelper FillTheFields(ContactData contact)
+        public ContactHelper FillContactForm(ContactData contact)
         {
-            driver.FindElement(By.Name("firstname")).Clear();
-            driver.FindElement(By.Name("firstname")).SendKeys(contact.Firstname);
-            driver.FindElement(By.Name("middlename")).Clear();
-            driver.FindElement(By.Name("middlename")).SendKeys(contact.Middlename);
-            driver.FindElement(By.Name("lastname")).Clear();
-            driver.FindElement(By.Name("lastname")).SendKeys(contact.Lastname);
-            driver.FindElement(By.Name("nickname")).Clear();
-            driver.FindElement(By.Name("nickname")).SendKeys(contact.Nickname);
-            driver.FindElement(By.Name("company")).Clear();
-            driver.FindElement(By.Name("company")).SendKeys(contact.Company);
-            driver.FindElement(By.Name("home")).Clear();
-            driver.FindElement(By.Name("home")).SendKeys(contact.Home);
-            driver.FindElement(By.Name("mobile")).Clear();
-            driver.FindElement(By.Name("mobile")).SendKeys(contact.Mobile);
-            return this;    
+            Type(By.Name("firstname"), contact.Firstname);
+            Type(By.Name("middlename"), contact.Middlename);
+            Type(By.Name("lastname"), contact.Lastname);
+            Type(By.Name("nickname"), contact.Nickname);
+            Type(By.Name("company"), contact.Company);
+            Type(By.Name("home"), contact.Home);
+            Type(By.Name("mobile"), contact.Mobile);            
+            return this;
         }
+
         public ContactHelper InitNewContact()
         {
             driver.FindElement(By.LinkText("add new")).Click();

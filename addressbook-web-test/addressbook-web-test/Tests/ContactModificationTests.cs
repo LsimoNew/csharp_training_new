@@ -9,9 +9,9 @@ namespace WebAddressbookTests
         public void ContactModificationTest()
         {
             ContactData newData = new ContactData("Tri", "Dva", "Raz");
-            newData.Nickname = "a";
-            newData.Company = "b";
-            newData.Home = "c";
+            newData.Nickname = null;
+            newData.Company = null;
+            newData.Home = null;
 
             app.Contacts.Modify(2, newData);
         }
