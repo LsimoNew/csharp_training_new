@@ -2,7 +2,7 @@
 
 namespace WebAddressbookTests
 {
-    public class ContactRemovalTests : TestBase
+    public class ContactRemovalTests : AuthTestBase
     {
         [Test]
         public void ContactRemovalTest()

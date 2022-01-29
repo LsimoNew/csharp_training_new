@@ -7,7 +7,7 @@ using OpenQA.Selenium.Chrome;
 namespace WebAddressbookTests
 {
     [TestFixture]
-     public class ContactCreationTests : TestBase
+     public class ContactCreationTests : AuthTestBase
     {
         [Test]
         public void CreateContact()
