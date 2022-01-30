@@ -13,7 +13,7 @@ namespace WebAddressbookTests
             newData.Company = null;
             newData.Home = null;
 
-            app.Contacts.Modify(2, newData);
+            app.Contacts.Modify(0, newData);
         }
     }
 }

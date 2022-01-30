@@ -35,7 +35,7 @@ namespace WebAddressbookTests
             contactHelper = new ContactHelper(this);
         }
 
-        ~ApplicationManager()
+/*        ~ApplicationManager()
         {
             try
             {
@@ -45,7 +45,7 @@ namespace WebAddressbookTests
             {
                 // Ignore errors if unable to close the browser
             }
-        }
+        }*/
 
         public static ApplicationManager GetInstance()
         {
@@ -96,6 +96,21 @@ namespace WebAddressbookTests
                 return contactHelper;
             }
         }
+
+        public void Stop()
+        {
+            
+                try
+                {
+                    driver.Quit();
+                }
+                catch (Exception)
+                {
+                    // Ignore errors if unable to close the browser
+                }
+            
+        }
+
     }
 }
     
