@@ -6,20 +6,43 @@ using System.Threading.Tasks;
 
 namespace WebAddressbookTests
 {
-    public class ContactData
+    public class ContactData : IEquatable<ContactData>
     {
         private string firstname;
-        private string middlename;
+        private string middlename = "";
         private string lastname;
         private string nickname = "";
         private string company = "";
         private string home = "";
         private string mobile = "";
 
-        public ContactData(string firstname, string middlename, string lastname)
+        public bool Equals(ContactData other)
+        {
+            if (Object.ReferenceEquals(other, null))
+            {
+                return false;
+            }
+            if (Object.ReferenceEquals(this, other))
+            {
+                return true;
+            }
+            return Firstname == other.Firstname && Lastname == other.Lastname;
+        }
+
+
+        public int GetHashCodeFirstname()
+        {
+            return Firstname.GetHashCode();
+        }
+
+        public int GetHashCodeLastname()
+        {
+            return Lastname.GetHashCode();
+        }
+
+        public ContactData(string firstname, string lastname)
         {
             this.firstname = firstname;
-            this.middlename = middlename;
             this.lastname = lastname;
         }
 

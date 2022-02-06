@@ -1,10 +1,11 @@
 ﻿using NUnit.Framework;
-
+using System;
 
 namespace WebAddressbookTests
 {
     public class TestBase
     {
+
         protected ApplicationManager app;
 
         [SetUp]
@@ -14,6 +15,8 @@ namespace WebAddressbookTests
         }
 
         [OneTimeTearDown]
+
+
         public void StopApplicationManager()
         {
             ApplicationManager.GetInstance().Stop();

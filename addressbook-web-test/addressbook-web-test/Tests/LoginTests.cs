@@ -20,6 +20,9 @@ namespace WebAddressbookTests
 
             // verification
             Assert.IsTrue(app.Auth.IsLoggedIn(account));
+
+            // after
+            app.Auth.Logout();
         }
 
         [Test]
@@ -34,6 +37,9 @@ namespace WebAddressbookTests
 
             // verification
             Assert.IsFalse(app.Auth.IsLoggedIn(account));
+
+            // after
+            app.Auth.Logout();
         }
     }
 }

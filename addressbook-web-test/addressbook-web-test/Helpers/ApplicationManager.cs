@@ -10,7 +10,7 @@ using OpenQA.Selenium.Support.UI;
 
 namespace WebAddressbookTests
 {
-    public class ApplicationManager
+    public class ApplicationManager 
     {
         protected IWebDriver driver;
         protected string baseURL;
@@ -34,18 +34,6 @@ namespace WebAddressbookTests
 
             contactHelper = new ContactHelper(this);
         }
-
-/*        ~ApplicationManager()
-        {
-            try
-            {
-                driver.Quit();
-            }
-            catch (Exception)
-            {
-                // Ignore errors if unable to close the browser
-            }
-        }*/
 
         public static ApplicationManager GetInstance()
         {
@@ -99,18 +87,17 @@ namespace WebAddressbookTests
 
         public void Stop()
         {
-            
-                try
-                {
-                    driver.Quit();
-                }
-                catch (Exception)
-                {
-                    // Ignore errors if unable to close the browser
-                }
-            
-        }
 
+            try
+            {
+                driver.Quit();
+            }
+            catch (Exception)
+            {
+                // Ignore errors if unable to close the browser
+            }
+
+        }
     }
 }
     
