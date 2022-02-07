@@ -43,13 +43,14 @@ namespace WebAddressbookTests
 
         public int CompareTo(ContactData other)
         {
-            var a = Firstname + Lastname;
-
             if (Object.ReferenceEquals(other, null))
             {
                 return 1;
             }
-            return Firstname.CompareTo(other.Firstname);
+            int firstP = Firstname.CompareTo(other.Firstname);
+            int secondP = Lastname.CompareTo(other.Lastname);
+            return (firstP == 0 && secondP == 0) ? 0 : -1;
+            /*return Firstname.CompareTo(other.Firstname);*/
         }
 
         public ContactData(string firstname, string lastname)
